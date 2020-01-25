@@ -1,3 +1,17 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/_globalfont/AvenirNextProLT/Avenir-regular.otf);
+}
+
+* {
+  font-family: Avenir;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +19,63 @@ body {
 
 .header {
   background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+.header__logo {
+  width: 10rem;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav__link {
+  color: white;
+  width: 160px;
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav__link--active {
+  border-bottom: white solid 3px;
+}
+
+.hero {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hero__image {
+  width: 100%;
 }
 
 .footer {
