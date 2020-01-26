@@ -160,5 +160,37 @@ body{
 
 .footer{
     background-color:#323232;
+    display: flex;
+    justify-content: center;
     color:white;
+
+    &__square{
+        width: 90%;
+        padding-right: 25%;
+        padding-bottom: 30px;
+    
+        &--top {
+            
+            &--title{
+            font-size: 2.3rem;
+            }
+
+            &--iconcontainer{
+                width: 140px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &--contacts--card{
+
+            &--address, &--email {
+                font-size: .8rem;
+            }
+        }
+
+        &--copyright{
+            font-size: .8rem;
+        }
+    }  
 }
