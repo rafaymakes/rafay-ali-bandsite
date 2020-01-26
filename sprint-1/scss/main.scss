@@ -1,5 +1,17 @@
 @use 'fonts';
 
+@mixin tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+@mixin desktop {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
 *{
     font-family: Avenir, sans-serif;
 }
@@ -27,10 +39,22 @@ body{
     padding: 0;
     margin: 0;
 
+    @include tablet{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
 
     &__logo{
         width: 10rem;
         padding-top: 1rem;
+
+        @include tablet{
+            display:inline-block;
+            padding-top: 0rem;
+            align-self: center;
+            margin-left: 24px;
+        }
     }
 
     &__nav{
@@ -40,6 +64,10 @@ body{
         padding: 0;
         margin: 0;
 
+        @include tablet{
+            display:inline-block;
+        }
+
         &--link{
             color: white;
             width: 50%;
@@ -47,6 +75,14 @@ body{
             text-align: center;
             padding-bottom: .5rem;
             margin: 0;
+
+            @include tablet{
+                width: 85px;
+                height: 43px;
+                padding-bottom: 0;
+                display:inline-block;
+                margin-left: 45px;
+            }
 
             &--active{
                 border-bottom: white solid 3px;
@@ -106,7 +142,7 @@ body{
 
         &--title{
             margin-top:1rem;
-            font-weight: bolder !important; 
+            font-weight: bold !important; 
             // I have no clue why font-weight doesn't work here. 
             //Googling says it's a bug with using downloaded fonts
         }
