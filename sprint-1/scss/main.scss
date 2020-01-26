@@ -7,7 +7,7 @@
   }
 
 @mixin desktop {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1200px) {
       @content;
     }
   }
@@ -57,7 +57,7 @@ body{
         }
 
         @include desktop{
-            margin-left:180px;
+            margin-left:150px;
         }
     }
 
@@ -118,7 +118,7 @@ body{
     }
 
     @include desktop{
-        height: 670px;
+        height: 558px;
     }
 
     &__overlay{
@@ -148,8 +148,8 @@ body{
         }
 
         @include desktop{
-            top: 35%;
-            left: 180px;
+            top: 30%;
+            left: 150px;
         }
     }
 }
@@ -169,6 +169,10 @@ body{
             width: 94%;
         }
 
+        @include desktop{
+            width: 747px;
+        }
+
         &--title{
             margin-top:1rem;
             transform: scale(1,.95);
@@ -181,6 +185,12 @@ body{
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
+
+            @include desktop{
+                margin-left: -70px;
+                margin-top: 35px;
+                margin-bottom: 35px;
+            }
         }
 
         &--image{
@@ -190,6 +200,10 @@ body{
 
             @include tablet{
                 height: 362px;
+            }
+
+            @include desktop{
+                height: 375px;
             }
         }
 
@@ -201,6 +215,11 @@ body{
             &--blurb{
                 @include tablet{
                     font-size: 1.3rem;
+                }
+
+                @include desktop{
+                    margin-top: 40px;
+                    margin-bottom: 32px;
                 }
             }
 
@@ -216,12 +235,20 @@ body{
                     margin-bottom: 10px;
                 }
 
+                @include desktop{
+                    font-size: 1.25rem;
+                }
+
             }
 
             &--textcontainer{
-                
+        
                 @include tablet{
                     display: flex;
+                }
+
+                @include desktop{
+                    justify-content: space-between;
                 }
             
                 &--text{
@@ -235,10 +262,16 @@ body{
                         font-size: .9rem;
                     }
 
+                    @include desktop{
+                        width: 400px;
+                        font-size: .8rem;
+                    }
+
                     &--2{
                         @include tablet{
                             margin-left: 28px;
                         }
+                        
                     }
                 }
             }
