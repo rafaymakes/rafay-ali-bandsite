@@ -187,7 +187,7 @@ body{
             }
 
             @include desktop{
-                margin-left: -70px;
+                margin-left: -76px;
                 margin-top: 35px;
                 margin-bottom: 35px;
             }
@@ -210,6 +210,7 @@ body{
         &--quote{
             font-size: .9rem;
             width: 95%;
+            transform: scale(1,.95);
             font-weight: bold;
 
             &--blurb{
@@ -229,6 +230,7 @@ body{
 
             &--title{
                 font-size: 1rem;
+                transform: scale(1,.95);
 
                 @include tablet{
                     font-size: 1.5rem;
@@ -299,6 +301,10 @@ body{
             font-size: 2.3rem;
             margin-left: 1.5rem;
         }
+
+        @include desktop{
+            margin-left: 9.2rem;
+        }
     }
 
     &__imageContainer{
@@ -312,6 +318,11 @@ body{
             width: 100%;
         }
 
+        @include desktop{
+            width: 75%;
+            justify-content: space-between;
+        }
+
         &--image{
             width:288px;
             padding-bottom: 8px;
@@ -319,6 +330,10 @@ body{
             @include tablet{
                 width: 224px;
                 padding-bottom: 24px;
+            }
+
+            @include desktop{
+                width: 286px;
             }
         }
     }

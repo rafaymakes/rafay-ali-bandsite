@@ -237,7 +237,7 @@ body {
 
 @media only screen and (min-width: 1200px) {
   .about__square--title {
-    margin-left: -70px;
+    margin-left: -76px;
     margin-top: 35px;
     margin-bottom: 35px;
   }
@@ -265,6 +265,8 @@ body {
 .about__square--quote {
   font-size: .9rem;
   width: 95%;
+  -webkit-transform: scale(1, 0.95);
+          transform: scale(1, 0.95);
   font-weight: bold;
 }
 
@@ -283,6 +285,8 @@ body {
 
 .about__square--bio--title {
   font-size: 1rem;
+  -webkit-transform: scale(1, 0.95);
+          transform: scale(1, 0.95);
 }
 
 @media only screen and (min-width: 768px) {
@@ -374,6 +378,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .gallery__title {
+    margin-left: 9.2rem;
+  }
+}
+
 .gallery__imageContainer {
   width: 90%;
   display: -webkit-box;
@@ -394,6 +404,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .gallery__imageContainer {
+    width: 75%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .gallery__imageContainer--image {
   width: 288px;
   padding-bottom: 8px;
@@ -403,6 +422,12 @@ body {
   .gallery__imageContainer--image {
     width: 224px;
     padding-bottom: 24px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gallery__imageContainer--image {
+    width: 286px;
   }
 }
 
