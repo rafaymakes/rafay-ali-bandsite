@@ -7,11 +7,6 @@
     font-family: Avenir;
 }
 
-html{
-    padding: 0;
-    margin: 0;
-}
-
 body{
     margin: 0;
     padding: 0;
@@ -21,7 +16,7 @@ body{
     background-color: #323232;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width:100%;
     height: 80px;
@@ -31,8 +26,7 @@ body{
 
     &__logo{
         width: 10rem;
-        padding-bottom: 12px;
-        padding-top: 12px;
+        padding-top: 1rem;
     }
 
     &__nav{
@@ -42,12 +36,12 @@ body{
         padding: 0;
         margin: 0;
 
-        &__link{
+        &--link{
             color: white;
-            width: 160px;
+            width: 50%;
             text-decoration: none;
             text-align: center;
-            padding: 0;
+            padding-bottom: .5rem;
             margin: 0;
 
             &--active{
@@ -61,13 +55,43 @@ body{
 
 .hero{
     width: 100%;
+    height: 11.5rem;
     padding: 0;
     margin: 0;
+    position: relative;
+
+    &__overlay{
+        width:100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index:1;
+        background-color: rgb(0,0,0);
+        opacity: 0.2;
+    }
 
     &__image{
         width: 100%;
+        z-index: 0;
     }
+
+    &__members{
+        margin:0;
+        position: absolute;
+        top: 30%;
+        z-index: 1;
+        left:1rem;
+        width: 200px;
+        color: white;
+        
+    }
+    
 }
+
+.about{
+}
+
+
 
 .footer{
     background-color:#323232;

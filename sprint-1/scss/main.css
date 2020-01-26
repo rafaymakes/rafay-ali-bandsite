@@ -7,11 +7,6 @@
   font-family: Avenir;
 }
 
-html {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -26,9 +21,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -40,8 +35,7 @@ body {
 
 .header__logo {
   width: 10rem;
-  padding-bottom: 12px;
-  padding-top: 12px;
+  padding-top: 1rem;
 }
 
 .header__nav {
@@ -55,27 +49,50 @@ body {
   margin: 0;
 }
 
-.header__nav__link {
+.header__nav--link {
   color: white;
-  width: 160px;
+  width: 50%;
   text-decoration: none;
   text-align: center;
-  padding: 0;
+  padding-bottom: .5rem;
   margin: 0;
 }
 
-.header__nav__link--active {
+.header__nav--link--active {
   border-bottom: white solid 3px;
 }
 
 .hero {
   width: 100%;
+  height: 11.5rem;
   padding: 0;
   margin: 0;
+  position: relative;
+}
+
+.hero__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.2;
 }
 
 .hero__image {
   width: 100%;
+  z-index: 0;
+}
+
+.hero__members {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  left: 1rem;
+  width: 200px;
+  color: white;
 }
 
 .footer {
