@@ -2,7 +2,6 @@
 
 *{
     font-family: Avenir, sans-serif;
-    font-weight: bold;
 }
 
 html{
@@ -99,11 +98,15 @@ body{
         width:90%;
         display: flex;
         flex-direction: column;
+        margin-bottom: 20px;
 
         &--title{
             margin-top:1rem;
-            font-family: avenir;
-            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+            // font-weight: bolder !important; 
+
         }
 
         &--image{
@@ -127,12 +130,33 @@ body{
                 font-size: .8rem;
                 font-weight: lighter;
                 line-height: 1.5;
+
             }
         }
     }
 }
 
+.gallery{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 
+    &__title{
+        align-self: flex-start;
+        margin-left: 1rem;
+    }
+
+    &__imageContainer{
+        width: 90%;
+
+        &--image{
+            width:100%;
+            padding-bottom: 8px;
+        }
+    }
+}
 
 .footer{
     background-color:#323232;
