@@ -45,7 +45,6 @@ body{
         align-items: flex-end;
     }
 
-
     &__logo{
         width: 10rem;
         padding-top: 1rem;
@@ -55,6 +54,10 @@ body{
             padding-top: 0rem;
             align-self: center;
             margin-left: 24px;
+        }
+
+        @include desktop{
+            margin-left:180px;
         }
     }
 
@@ -85,8 +88,16 @@ body{
                 margin-left: 45px;
             }
 
+            @include desktop{
+                margin-left: 56px;
+            }
+
             &--active{
                 border-bottom: white solid 3px;
+
+                @include desktop{
+                    border-bottom: white solid 5px;
+                }
             }
         }
     }
@@ -104,6 +115,10 @@ body{
 
     @include tablet{
         height: 400px;
+    }
+
+    @include desktop{
+        height: 670px;
     }
 
     &__overlay{
@@ -130,6 +145,11 @@ body{
             width: 70%;
             font-size: 3.5rem;
             left: 24px;
+        }
+
+        @include desktop{
+            top: 35%;
+            left: 180px;
         }
     }
 }
