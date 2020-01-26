@@ -1,15 +1,20 @@
-@font-face{
-    font-family: Avenir;
-    src: url(../assets/_globalfont/AvenirNextProLT/Avenir-regular.otf);
-}
+@use 'fonts';
 
 *{
-    font-family: Avenir;
+    font-family: Avenir, sans-serif;
+    font-weight: bold;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 .header{
@@ -51,12 +56,9 @@ body{
     }
 }
 
-
-
 .hero{
     width: 100%;
-    height: 11.5rem;
-    padding: 0;
+    height: 30%;
     margin: 0;
     position: relative;
 
@@ -67,12 +69,12 @@ body{
         top: 0;
         z-index:1;
         background-color: rgb(0,0,0);
-        opacity: 0.2;
+        opacity: 0.5;
     }
 
     &__image{
         width: 100%;
-        z-index: 0;
+        z-index: -1;
     }
 
     &__members{
@@ -83,12 +85,51 @@ body{
         left:1rem;
         width: 200px;
         color: white;
-        
+        transform: scale(1,.95);
+        font-weight: bold;
     }
-    
 }
 
 .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__square{
+        width:90%;
+        display: flex;
+        flex-direction: column;
+
+        &--title{
+            margin-top:1rem;
+            font-family: avenir;
+            font-weight: bold;
+        }
+
+        &--image{
+            width: 100%;
+            height: 10rem;
+            object-fit: cover;
+        }
+
+        &--quote{
+            font-size: .9rem;
+            width: 95%;
+        }
+
+        &--bio {
+
+            &--title{
+                font-size: 1rem;
+            }
+
+            &--textcontainer--text{
+                font-size: .8rem;
+                font-weight: lighter;
+                line-height: 1.5;
+            }
+        }
+    }
 }
 
 
