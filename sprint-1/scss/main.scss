@@ -232,6 +232,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 30px;
 
     &__title{
         align-self: flex-start;
@@ -277,12 +278,36 @@ body{
     color:white;
     padding-left: 15px;
 
+    @include tablet{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
     &__square{
         width: 90%;
         padding-right: 25%;
         padding-bottom: 30px;
+        padding-top: 13px;
+
+        @include tablet{
+            padding-right: 0;
+            width:100%;
+        }
     
         &--top {
+
+            @include tablet{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &--logo{
+                display: none;
+
+                @include tablet{
+                    display: initial;
+                }
+            }
             
             &--title{
             font-size: 2.3rem;
@@ -293,24 +318,43 @@ body{
                 display: flex;
                 justify-content: space-between;
                 margin-left: 10px;
+
+                @include tablet{
+                    margin-left: 0;
+                    margin-right: 20%;
+
+                }
             }
         }
 
-        &--contacts--card{
-
-            &--name{
-                font-weight: bold;
+        &--contacts{ 
+            
+            @include tablet{
+                display:flex;
+                justify-content: space-evenly;
             }
+        
+            &--card{
 
-            &--address, &--email {
-                font-size: .8rem;
-                font-weight: lighter;
+                &--name{
+                    font-weight: bold;
+                }
+
+                &--address, &--email {
+                    font-size: .8rem;
+                    font-weight: lighter;
+                }
             }
         }
 
         &--copyright{
+            width: 90%;
             font-size: .8rem;
             font-weight: lighter;
+
+            @include tablet{
+                margin-left: 3%;
+            }
         }
     }  
 }
