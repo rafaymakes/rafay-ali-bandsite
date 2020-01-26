@@ -237,16 +237,35 @@ body{
         align-self: flex-start;
         margin-left: 1rem;
         font-weight: bold;
+        transform: scale(1,.95);
         //same font-weight issue here
         //it still doesn't work when I change the font-family
+
+        @include tablet{
+            font-size: 2.3rem;
+            margin-left: 1.5rem;
+        }
     }
 
     &__imageContainer{
         width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-self: center;
+
+        @include tablet{
+            width: 100%;
+        }
 
         &--image{
             width:288px;
             padding-bottom: 8px;
+
+            @include tablet{
+                width: 224px;
+                padding-bottom: 24px;
+            }
         }
     }
 }
