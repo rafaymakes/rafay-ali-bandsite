@@ -102,11 +102,9 @@ body{
 
         &--title{
             margin-top:1rem;
-            font-family: Arial, Helvetica, sans-serif;
-
-
-            // font-weight: bolder !important; 
-
+            font-weight: bolder !important; 
+            // I have no clue why font-weight doesn't work here. 
+            //Googling says it's a bug with using downloaded fonts
         }
 
         &--image{
@@ -128,9 +126,9 @@ body{
 
             &--textcontainer--text{
                 font-size: .8rem;
-                font-weight: lighter;
                 line-height: 1.5;
-
+                font-weight: lighter;
+                //font-weight works fine here though for some reason
             }
         }
     }
@@ -146,6 +144,9 @@ body{
     &__title{
         align-self: flex-start;
         margin-left: 1rem;
+        font-weight: bold;
+        //same font-weight issue here
+        //it still doesn't work when I change the font-family
     }
 
     &__imageContainer{
@@ -163,6 +164,7 @@ body{
     display: flex;
     justify-content: center;
     color:white;
+    padding-left: 15px;
 
     &__square{
         width: 90%;
@@ -179,18 +181,25 @@ body{
                 width: 140px;
                 display: flex;
                 justify-content: space-between;
+                margin-left: 10px;
             }
         }
 
         &--contacts--card{
 
+            &--name{
+                font-weight: bold;
+            }
+
             &--address, &--email {
                 font-size: .8rem;
+                font-weight: lighter;
             }
         }
 
         &--copyright{
             font-size: .8rem;
+            font-weight: lighter;
         }
     }  
 }

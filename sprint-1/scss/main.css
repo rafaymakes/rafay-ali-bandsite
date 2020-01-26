@@ -127,7 +127,7 @@ body {
 
 .about__square--title {
   margin-top: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder !important;
 }
 
 .about__square--image {
@@ -148,8 +148,8 @@ body {
 
 .about__square--bio--textcontainer--text {
   font-size: .8rem;
-  font-weight: lighter;
   line-height: 1.5;
+  font-weight: lighter;
 }
 
 .gallery {
@@ -173,6 +173,7 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-left: 1rem;
+  font-weight: bold;
 }
 
 .gallery__imageContainer {
@@ -193,6 +194,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
+  padding-left: 15px;
 }
 
 .footer__square {
@@ -213,13 +215,20 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 10px;
+}
+
+.footer__square--contacts--card--name {
+  font-weight: bold;
 }
 
 .footer__square--contacts--card--address, .footer__square--contacts--card--email {
   font-size: .8rem;
+  font-weight: lighter;
 }
 
 .footer__square--copyright {
   font-size: .8rem;
+  font-weight: lighter;
 }
 /*# sourceMappingURL=main.css.map */
