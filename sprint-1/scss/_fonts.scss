@@ -1,23 +1,19 @@
 @font-face{
-    font-family: Avenir;
-    src: url(../assets/_globalfont/AvenirNextProLT/Avenir-Regular.otf);
-    font-weight: normal;
+    font-family: "Avenir-Regular";
+    src: url("../assets/_globalfont/AvenirNextProLT/Regular.ttf");
 }
 
 @font-face{
-    font-family: Avenir;
-    src: url(../assets/_globalfont/AvenirNextProLT/Avenir-Bold.otf);
-    font-weight: bold;
+    font-family: "Avenir-Bold";
+    src: url("../assets/_globalfont/AvenirNextProLT/Bold.ttf");
 }
 
 @font-face{
-    font-family: Avenir;
-    src: url(../assets/_globalfont/AvenirNextProLT/Avenir-Light.otf);
-    font-weight: lighter;
+    font-family: "Avenir-Light";
+    src: url("../assets/_globalfont/AvenirNextProLT/Light.ttf");
 }
 
 @font-face{
-    font-family: Avenir;
-    src: url(../assets/_globalfont/AvenirNextProLT/Avenir-Heavy.otf);
-    font-weight: bolder;
+    font-family: "Avenir-Heavy";
+    src: url("../assets/_globalfont/AvenirNextProLT/Heavy.ttf");
 }

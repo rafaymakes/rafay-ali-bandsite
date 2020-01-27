@@ -13,7 +13,7 @@
   }
 
 *{
-    font-family: Avenir, sans-serif;
+    font-family: Avenir-Regular, sans-serif;
 }
 
 body{
@@ -74,6 +74,7 @@ body{
             text-align: center;
             padding-bottom: .5rem;
             margin: 0;
+            font-family: Avenir-Light;
 
             @include tablet{
                 width: 85px;
@@ -185,7 +186,8 @@ body{
         &--title{
             margin-top:1rem;
             transform: scale(1,.95);
-            font-weight: bold !important; 
+            font-family: "Avenir-Heavy";
+            // font-weight: bold !important; 
             // I have no clue why font-weight doesn't work here. 
             //Googling says it's a bug with using downloaded fonts
 
@@ -483,4 +485,5 @@ body{
     color: white;
     text-decoration: none;
 }
+
 
