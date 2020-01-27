@@ -335,7 +335,6 @@ body{
         &--image{
             width:288px;
             padding-bottom: 16px;
-            filter: grayscale(100%);
 
             &:hover{
                 filter: none;
@@ -348,6 +347,10 @@ body{
 
             @include desktop{
                 width: 286px;
+
+                //placed this in a media query since you can't really hover on touchscreen devices
+                //don't want the pictures to be stuck in B&W on those devices
+                filter: grayscale(100%);
             }
         }
     }

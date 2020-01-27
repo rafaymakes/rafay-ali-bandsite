@@ -458,8 +458,6 @@ body {
 .gallery__imageContainer--image {
   width: 288px;
   padding-bottom: 16px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
 }
 
 .gallery__imageContainer--image:hover {
@@ -477,6 +475,8 @@ body {
 @media only screen and (min-width: 1200px) {
   .gallery__imageContainer--image {
     width: 286px;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
 }
 
