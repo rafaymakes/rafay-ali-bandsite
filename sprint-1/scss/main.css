@@ -464,6 +464,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .footer__square {
+    width: 78.5%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .footer__square--top {
     display: -webkit-box;
@@ -485,8 +491,20 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .footer__square--top--logo {
+    width: 120px;
+  }
+}
+
 .footer__square--top--title {
   font-size: 2.3rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__square--top--title {
+    font-size: 2rem;
+  }
 }
 
 .footer__square--top--iconcontainer {
@@ -507,6 +525,13 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .footer__square--top--iconcontainer {
+    width: 110px;
+    margin-right: 45%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .footer__square--contacts {
     display: -webkit-box;
@@ -518,8 +543,23 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .footer__square--contacts {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 32%;
+  }
+}
+
 .footer__square--contacts--card--name {
   font-weight: bold;
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__square--contacts--card--name {
+    font-size: .8rem;
+  }
 }
 
 .footer__square--contacts--card--address, .footer__square--contacts--card--email {
@@ -536,6 +576,12 @@ body {
 @media only screen and (min-width: 768px) {
   .footer__square--copyright {
     margin-left: 3%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1200px) {
+  .footer__square--copyright {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -361,6 +361,10 @@ body{
             padding-right: 0;
             width:100%;
         }
+
+        @include desktop{
+            width: 78.5%;
+        }
     
         &--top {
 
@@ -375,10 +379,18 @@ body{
                 @include tablet{
                     display: initial;
                 }
+
+                @include desktop{
+                    width: 120px;
+                }
             }
             
             &--title{
             font-size: 2.3rem;
+
+                @include desktop{
+                    font-size: 2rem;
+                }
             }
 
             &--iconcontainer{
@@ -390,7 +402,11 @@ body{
                 @include tablet{
                     margin-left: 0;
                     margin-right: 20%;
+                }
 
+                @include desktop{
+                    width: 110px;
+                    margin-right: 45%;
                 }
             }
         }
@@ -401,11 +417,20 @@ body{
                 display:flex;
                 justify-content: space-evenly;
             }
+
+            @include desktop{
+                justify-content: space-between;
+                padding-right: 32%;
+            }
         
             &--card{
 
                 &--name{
                     font-weight: bold;
+                    
+                    @include desktop{
+                        font-size: .8rem;
+                    }
                 }
 
                 &--address, &--email {
@@ -422,6 +447,10 @@ body{
 
             @include tablet{
                 margin-left: 3%;
+
+            @include desktop{
+                margin-left: 0;
+            }
             }
         }
     }  
