@@ -16,12 +16,6 @@
     font-family: Avenir, sans-serif;
 }
 
-html{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
 body{
     margin: 0;
     padding: 0;
@@ -99,6 +93,20 @@ body{
                 @include desktop{
                     border-bottom: white solid 5px;
                 }
+            }
+
+            //deep-dive nav hover
+            @keyframes flash {
+                0% {color: #FAFAFA;}
+                20% {color: rgb(3, 178, 231);}
+                40% {color: rgba(181, 155, 192, 0.788);}
+                60% {color: rgb(242, 255, 67);}
+                80% {color: rgb(250, 128, 14);}
+                100%{color: #FAFAFA;}
+            }
+
+            &:hover {
+                animation: flash 4s linear infinite;
             }
         }
     }
@@ -327,6 +335,11 @@ body{
         &--image{
             width:288px;
             padding-bottom: 16px;
+            filter: grayscale(100%);
+
+            &:hover{
+                filter: none;
+            }
 
             @include tablet{
                 width: 224px;
@@ -368,6 +381,11 @@ body{
         }
     
         &--top {
+
+            @media screen and (max-width: 767px){
+                margin-bottom: 35px;
+
+            }
 
             @include tablet{
                 display: flex;
