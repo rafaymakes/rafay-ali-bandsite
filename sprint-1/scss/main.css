@@ -51,6 +51,7 @@ body {
 
 .header__logo {
   width: 10rem;
+  text-align: center;
   padding-top: 1rem;
 }
 
@@ -415,7 +416,7 @@ body {
 
 .gallery__imageContainer--image {
   width: 288px;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
