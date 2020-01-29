@@ -229,11 +229,17 @@ body{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+        @include tablet{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
     }
 
     &__event{
-        width: 288px;
-        height: 20rem;
+        width: 90%;
+        height: 5rem;
         margin-left: 16px;
         margin-right: 16px;
         background-color: white;
@@ -241,6 +247,22 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+
+        &--titles{
+            border-bottom: none;
+            height: 56px !important;
+            flex-direction: row;
+            height: 100px;
+            justify-content: space-between;
+            align-items: flex-end !important;
+        }
+
+        @include tablet{
+            flex-direction: row;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__description{
@@ -250,10 +272,26 @@ body{
         margin-top: 24px;
         margin-bottom: 16px;
 
+        &--tablet{
+            color: #AFAFAF;
+            font-weight: normal;
+            margin: 0 !important;
+            font-size: 14px;
+            width: 150px;
+        }
+
+        @include tablet{
+            display: none;
+        }
+
         &--detail{
             font-weight: lighter;
             font-size: 14px;
             margin: 0;
+
+            @include tablet{
+                width: 150px;
+            }
 
             &--date{
                 font-size: 16px;
@@ -273,6 +311,17 @@ body{
         margin-bottom: 16px;
         border: #323232 solid 1px;
         border-radius: 6px;
+
+        &--tablet{
+            visibility: hidden;
+            margin: 0;
+        }
+
+        @include tablet{
+            width: 170px;
+            height: 50px;
+            border-radius: 4px;
+        }
     }
 }
 

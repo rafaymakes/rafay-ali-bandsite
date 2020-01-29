@@ -342,9 +342,23 @@ body {
       flex-wrap: wrap;
 }
 
+@media only screen and (min-width: 768px) {
+  .shows__eventscontainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .shows__event {
-  width: 288px;
-  height: 20rem;
+  width: 90%;
+  height: 5rem;
   margin-left: 16px;
   margin-right: 16px;
   background-color: white;
@@ -361,6 +375,38 @@ body {
           justify-content: flex-start;
 }
 
+.shows__event--titles {
+  border-bottom: none;
+  height: 56px !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .shows__event {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .shows__description {
   color: #AFAFAF;
   font-weight: normal;
@@ -369,10 +415,30 @@ body {
   margin-bottom: 16px;
 }
 
+.shows__description--tablet {
+  color: #AFAFAF;
+  font-weight: normal;
+  margin: 0 !important;
+  font-size: 14px;
+  width: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+  .shows__description {
+    display: none;
+  }
+}
+
 .shows__description--detail {
   font-weight: lighter;
   font-size: 14px;
   margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .shows__description--detail {
+    width: 150px;
+  }
 }
 
 .shows__description--detail--date {
@@ -391,6 +457,19 @@ body {
   margin-bottom: 16px;
   border: #323232 solid 1px;
   border-radius: 6px;
+}
+
+.shows__button--tablet {
+  visibility: hidden;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .shows__button {
+    width: 170px;
+    height: 50px;
+    border-radius: 4px;
+  }
 }
 
 .footer {
