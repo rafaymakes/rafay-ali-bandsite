@@ -71,7 +71,7 @@ body{
         text-decoration: none;
         width: 50%;
         text-align: center;
-        padding-bottom: .5rem;
+        padding-bottom: .7rem;
         margin: 0;
         font-family: Avenir-Light;
 
@@ -88,7 +88,7 @@ body{
         }
 
             &--active{
-                border-bottom: white solid 3px;
+                border-bottom: white solid 4px;
 
                 @include desktop{
                     border-bottom: white solid 5px;
@@ -98,15 +98,24 @@ body{
         //deep-dive nav hover
         @keyframes flash {
             0% {color: #FAFAFA;}
-            20% {color: rgb(3, 178, 231);}
-            40% {color: rgba(181, 155, 192, 0.788);}
-            60% {color: rgb(242, 255, 67);}
-            80% {color: rgb(250, 128, 14);}
+            20% {color: rgb(198, 66, 250);}
+            40% {color: rgba(245, 115, 40, 0.788);}
+            60% {color: rgb(248, 184, 9);}
+            80% {color: rgb(188, 165, 252);}
             100%{color: #FAFAFA;}
         }
 
+        @keyframes flash_border {
+            0% {border-color: #FAFAFA;}
+            20% {border-color: rgb(198, 66, 250);}
+            40% {border-color: rgba(245, 115, 40, 0.788);}
+            60% {border-color: rgb(248, 184, 9);}
+            80% {border-color: rgb(188, 165, 252);}
+            100%{border-color: #FAFAFA;}
+        }
+
         &:hover {
-            animation: flash 4s linear infinite;
+            animation: flash 4s linear infinite, flash_border 4s linear infinite;
         }
     }
 }
@@ -122,7 +131,7 @@ body{
     background-size: cover;
 
     @include tablet{
-        height: 400px;
+        height: 670px;
     }
 
     @include desktop{
@@ -150,16 +159,24 @@ body{
         transform: scale(1,.95);
         font-size: 15px;
         z-index: 2;
+
+        @include tablet{
+            left: 24px;
+            top: 96px;
+            font-size: 23px;
+            font-weight: bold;
+        }
     }
 
     &__title{
+        width: 300px;
         margin:0;
         position: absolute;
         top: 19%;
         z-index: 1;
         left:16px;
         color: white;
-        font-size: 2.3rem;
+        font-size: 2.22rem;
         font-weight: bold;
         line-height: 3.2rem;
         transform: scale(1,.95);
@@ -167,7 +184,9 @@ body{
         @include tablet{
             width: 70%;
             font-size: 3.5rem;
+            top: 150px;
             left: 24px;
+            line-height: 5rem;
         }
 
         @include desktop{
@@ -180,7 +199,14 @@ body{
         position: absolute;
         z-index: 1;
         top: 70%;
-        left: 4%;
+        left: 16px;
+
+        @include tablet{
+            top: 64%;
+            left: 24px;
+            width: 410px;
+            height: 140px;
+        }
     }
 }
 

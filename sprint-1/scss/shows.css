@@ -87,7 +87,7 @@ body {
   text-decoration: none;
   width: 50%;
   text-align: center;
-  padding-bottom: .5rem;
+  padding-bottom: .7rem;
   margin: 0;
   font-family: Avenir-Light;
 }
@@ -109,7 +109,7 @@ body {
 }
 
 .header__link--active {
-  border-bottom: white solid 3px;
+  border-bottom: white solid 4px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -123,16 +123,16 @@ body {
     color: #FAFAFA;
   }
   20% {
-    color: #03b2e7;
+    color: #c642fa;
   }
   40% {
-    color: rgba(181, 155, 192, 0.788);
+    color: rgba(245, 115, 40, 0.788);
   }
   60% {
-    color: #f2ff43;
+    color: #f8b809;
   }
   80% {
-    color: #fa800e;
+    color: #bca5fc;
   }
   100% {
     color: #FAFAFA;
@@ -144,25 +144,67 @@ body {
     color: #FAFAFA;
   }
   20% {
-    color: #03b2e7;
+    color: #c642fa;
   }
   40% {
-    color: rgba(181, 155, 192, 0.788);
+    color: rgba(245, 115, 40, 0.788);
   }
   60% {
-    color: #f2ff43;
+    color: #f8b809;
   }
   80% {
-    color: #fa800e;
+    color: #bca5fc;
   }
   100% {
     color: #FAFAFA;
   }
 }
 
+@-webkit-keyframes flash_border {
+  0% {
+    border-color: #FAFAFA;
+  }
+  20% {
+    border-color: #c642fa;
+  }
+  40% {
+    border-color: rgba(245, 115, 40, 0.788);
+  }
+  60% {
+    border-color: #f8b809;
+  }
+  80% {
+    border-color: #bca5fc;
+  }
+  100% {
+    border-color: #FAFAFA;
+  }
+}
+
+@keyframes flash_border {
+  0% {
+    border-color: #FAFAFA;
+  }
+  20% {
+    border-color: #c642fa;
+  }
+  40% {
+    border-color: rgba(245, 115, 40, 0.788);
+  }
+  60% {
+    border-color: #f8b809;
+  }
+  80% {
+    border-color: #bca5fc;
+  }
+  100% {
+    border-color: #FAFAFA;
+  }
+}
+
 .header__link:hover {
-  -webkit-animation: flash 4s linear infinite;
-          animation: flash 4s linear infinite;
+  -webkit-animation: flash 4s linear infinite, flash_border 4s linear infinite;
+          animation: flash 4s linear infinite, flash_border 4s linear infinite;
 }
 
 .hero {
@@ -178,7 +220,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .hero {
-    height: 400px;
+    height: 670px;
   }
 }
 
@@ -212,14 +254,24 @@ body {
   z-index: 2;
 }
 
+@media only screen and (min-width: 768px) {
+  .hero__subtitle {
+    left: 24px;
+    top: 96px;
+    font-size: 23px;
+    font-weight: bold;
+  }
+}
+
 .hero__title {
+  width: 300px;
   margin: 0;
   position: absolute;
   top: 19%;
   z-index: 1;
   left: 16px;
   color: white;
-  font-size: 2.3rem;
+  font-size: 2.22rem;
   font-weight: bold;
   line-height: 3.2rem;
   -webkit-transform: scale(1, 0.95);
@@ -230,7 +282,9 @@ body {
   .hero__title {
     width: 70%;
     font-size: 3.5rem;
+    top: 150px;
     left: 24px;
+    line-height: 5rem;
   }
 }
 
@@ -245,7 +299,16 @@ body {
   position: absolute;
   z-index: 1;
   top: 70%;
-  left: 4%;
+  left: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__music {
+    top: 64%;
+    left: 24px;
+    width: 410px;
+    height: 140px;
+  }
 }
 
 .shows {

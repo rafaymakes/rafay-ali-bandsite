@@ -72,7 +72,7 @@ body{
             width: 50%;
             text-decoration: none;
             text-align: center;
-            padding-bottom: .5rem;
+            padding-bottom: .7rem;
             margin: 0;
             font-family: Avenir-Light;
 
@@ -89,7 +89,7 @@ body{
             }
 
             &--active{
-                border-bottom: white solid 3px;
+                border-bottom: white solid 4px;
 
                 @include desktop{
                     border-bottom: white solid 5px;
@@ -106,8 +106,17 @@ body{
                 100%{color: #FAFAFA;}
             }
 
+            @keyframes flash_border {
+                0% {border-color: #FAFAFA;}
+                20% {border-color: rgb(3, 178, 231);}
+                40% {border-color: rgba(181, 155, 192, 0.788);}
+                60% {border-color: rgb(242, 255, 67);}
+                80% {border-color: rgb(250, 128, 14);}
+                100%{border-color: #FAFAFA;}
+            }
+
             &:hover {
-                animation: flash 4s linear infinite;
+                animation: flash 4s linear infinite, flash_border 4s linear infinite;
             }
         }
     }
