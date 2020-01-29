@@ -135,7 +135,7 @@ body{
     }
 
     @include desktop{
-        height: 558px;
+        height: 590px;
     }
 
     &__overlay{
@@ -166,6 +166,11 @@ body{
             font-size: 23px;
             font-weight: bold;
         }
+
+        @include desktop{
+            top: 133px;
+            left: 150px;
+        }
     }
 
     &__title{
@@ -192,6 +197,8 @@ body{
         @include desktop{
             top: 30%;
             left: 150px;
+            width: 38%;
+            font-size: 3rem;
         }
     }
 
@@ -207,6 +214,13 @@ body{
             width: 410px;
             height: 140px;
         }
+
+        @include desktop{
+            height: 122px;
+            width: 363px;
+            top: 45.5%;
+            left: 688px;
+        }
     }
 }
 
@@ -214,6 +228,10 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+
+    @include desktop{
+        justify-content: space-between;
+    }
     
     &__title{
         justify-self: flex-start;
@@ -221,7 +239,16 @@ body{
         margin-left: 16px;
         margin-bottom: 12px;
         font-size: 26px;
-        transform: scale(1,.95)
+        transform: scale(1,.95);
+
+        @include tablet{
+            margin-left: 24px;
+            margin-bottom: 0;
+        }
+
+        @include desktop{
+            margin-left: 150px;
+        }
     }
 
     &__eventscontainer{
@@ -234,12 +261,18 @@ body{
             flex-direction: column;
             flex-wrap: nowrap;
             align-items: center;
+            justify-content: space-between;
+        }
+
+        @include desktop{
+            width: 740px;
+            margin-right: 126px;
         }
     }
 
     &__event{
         width: 90%;
-        height: 5rem;
+        height: 20rem;
         margin-left: 16px;
         margin-right: 16px;
         background-color: white;
@@ -248,20 +281,25 @@ body{
         flex-direction: column;
         justify-content: flex-start;
 
-        &--titles{
-            border-bottom: none;
-            height: 56px !important;
-            flex-direction: row;
-            height: 100px;
-            justify-content: space-between;
-            align-items: flex-end !important;
-        }
-
         @include tablet{
             flex-direction: row;
-            height: 100px;
+            height: 90px;
             justify-content: space-between;
             align-items: center;
+            width: 93%;
+        }
+
+        &--titles{
+            border-bottom: none;
+            height: 50px !important;
+            flex-direction: row !important;
+            justify-content: space-between;
+            display: none;
+            align-items: flex-end !important;
+
+            @include tablet{
+                display: flex;
+            }
         }
     }
 
@@ -271,6 +309,12 @@ body{
         font-size: 14px;
         margin-top: 24px;
         margin-bottom: 16px;
+
+        &--date{
+            @include tablet{
+                margin-right: 50px !important;
+            }
+        }
 
         &--tablet{
             color: #AFAFAF;
@@ -296,6 +340,10 @@ body{
             &--date{
                 font-size: 16px;
                 font-weight: normal;
+
+                @include tablet{
+                    margin-right: 50px;
+                }
             }
         }
     }
@@ -321,6 +369,8 @@ body{
             width: 170px;
             height: 50px;
             border-radius: 4px;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
     }
 }
@@ -407,7 +457,7 @@ body{
             
             @include tablet{
                 display:flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
             }
 
             @include desktop{
@@ -437,14 +487,14 @@ body{
             width: 90%;
             font-size: .8rem;
             font-weight: lighter;
+            margin-left: 0;
 
-            @include tablet{
-                margin-left: 3%;
+            // @include tablet{
+            //     margin-left: 3%;
 
-            @include desktop{
-                margin-left: 0;
-            }
-            }
+            // @include desktop{
+            //     margin-left: 0;
+                
         }
     }  
 }
