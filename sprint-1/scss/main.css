@@ -559,6 +559,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .comments__inputs {
+    margin-left: 90px;
+  }
+}
+
 .comments__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,6 +585,12 @@ body {
 @media only screen and (min-width: 768px) {
   .comments__title {
     font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .comments__title {
+    margin-left: 134px;
   }
 }
 
@@ -659,6 +671,13 @@ body {
 @media only screen and (min-width: 768px) {
   .comments__outputs {
     width: 420px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .comments__outputs {
+    width: 480px;
+    margin-left: 32px;
   }
 }
 
