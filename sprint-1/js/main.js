@@ -6,18 +6,17 @@ commentsSection.appendChild(commentsOutputs);
 
 let arrUserNames = ['Daniil Molodkov','Rakesh Mistry','Joshua Taguicana'];
 let arrComments = ["Wow! This band is great, but their website is even better! I love the animation on the navigation links!","I came for the music but I stayed for the responsive design. It even looks good in between breakpoints!","There\'s no way I\'m giving this site anything less than a 100%. Whoever made this knows what they\'re doing!"];
-let arrDates = ['12/18/2018','12/12/2018','11/15/2018','Now'];
-let arrSrcs = ["./assets/images/comment1.jpeg", "./assets/images/comment2.jpeg", "./assets/images/comment3.jpeg","./assets/images/profile.jpg"];
+let arrDates = ['12/18/2018','12/12/2018','11/15/2018'];
+let arrSrcs = ["./assets/images/comment1.jpeg", "./assets/images/comment2.jpeg", "./assets/images/comment3.jpeg"];
 
-const createCard = function (arrUserNames,arrComments, arrDates, arrSrcs) {
+const createCard = function (userNames, comments, dates, sources) {
     const commentsCard = document.createElement('div');
     commentsCard.classList.add('comments__card');
     commentsOutputs.appendChild(commentsCard);
 
     const userPicture = document.createElement('img');
     userPicture.classList.add('comments__outpicture');
-    // userPicture.src = "./assets/images/comment1.jpeg";
-    userPicture.src = (arrSrcs[i]);
+    userPicture.src = (sources);
     commentsCard.appendChild(userPicture);
 
     const nameDate = document.createElement('div');
@@ -26,22 +25,22 @@ const createCard = function (arrUserNames,arrComments, arrDates, arrSrcs) {
 
     const userName = document.createElement('p');
     userName.classList.add('comments__outusername');
-    userName.textContent = (arrUserNames[i]);
+    userName.textContent = (userNames);
     nameDate.appendChild(userName);
 
     const date = document.createElement('p');
     date.classList.add('comments__outdate');
-    date.textContent = (arrDates[i]);
+    date.textContent = (dates);
     nameDate.appendChild(date);
 
     const commentText = document.createElement('p');
     commentText.classList.add('comments__outtext');
-    commentText.textContent = (arrComments[i]);
+    commentText.textContent = (comments);
     commentsCard.appendChild(commentText);
 }
 
 for (var i = 0; i <= arrUserNames.length-1; i++) {
-    createCard(arrUserNames,arrComments,arrDates,arrSrcs);
+    createCard(arrUserNames[i],arrComments[i],arrDates[i],arrSrcs[i]);
 }
 
 const commentButton = document.querySelector('.comments__button');
@@ -55,14 +54,19 @@ commentButton.onclick = function clickHandler () {
     
     arrUserNames.unshift(username);
     arrComments.unshift(comment);
+    arrDates.unshift('Now');
+    arrSrcs.unshift('./assets/images/profile.jpg')
 
     console.log(arrUserNames);
+    console.log(arrComments);
+    console.log(arrDates);
+    console.log(arrSrcs);
 
+    commentsOutputs.innerHTML = "";
 
-
-    // for (var i = 0; i <= arrUserNames.length-1; i++) {
-    //     createCard(arrUserNames,arrComments,arrDates,arrSrcs);
-    // }
+    for (var i = 0; i <= arrUserNames.length-1; i++) {
+        createCard(arrUserNames[i],arrComments[i],arrDates[i],arrSrcs[i]);
+    }
 }
 
 
