@@ -541,8 +541,22 @@ body {
           align-items: flex-end;
 }
 
+@media only screen and (min-width: 768px) {
+  .comments {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .comments__inputs {
   width: 224px;
+}
+
+@media only screen and (min-width: 768px) {
+  .comments__inputs {
+    width: 420px;
+  }
 }
 
 .comments__form {
@@ -560,6 +574,12 @@ body {
 .comments__title {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+@media only screen and (min-width: 768px) {
+  .comments__title {
+    font-size: 2.2rem;
+  }
 }
 
 .comments__picture {
@@ -622,10 +642,24 @@ body {
   border-radius: 6px;
 }
 
+@media only screen and (min-width: 768px) {
+  .comments__button {
+    width: 180px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
 .comments__outputs {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .comments__outputs {
+    width: 420px;
+  }
 }
 
 .comments__card {
@@ -655,6 +689,14 @@ body {
           justify-content: space-between;
 }
 
+@media only screen and (min-width: 768px) {
+  .comments__namedate {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .comments__outusername {
   margin: 0;
 }
@@ -663,6 +705,12 @@ body {
   font-weight: lighter;
   color: #AFAFAF;
   margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .comments__outdate {
+    margin-left: 5px;
+  }
 }
 
 .comments__outtext {

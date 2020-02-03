@@ -376,8 +376,16 @@ body{
     flex-direction: column;
     align-items: flex-end;
 
+    @include tablet{
+        align-items: center;
+    }
+
     &__inputs{
         width: 224px;
+
+        @include tablet{
+            width: 420px;
+        }
     }
 
     &__form{
@@ -389,6 +397,10 @@ body{
 
     &__title{
         align-self: flex-start;
+
+        @include tablet{
+            font-size: 2.2rem;
+        }
     }
 
     &__picture{
@@ -449,11 +461,20 @@ body{
         margin-bottom: 32px;
         border: 1px solid #323232  ;
         border-radius: 6px;
+
+        @include tablet{
+            width: 180px;
+            align-self: flex-end;
+        }
     }
 
     &__outputs{
         box-sizing: border-box;
         width: 100%;
+
+        @include tablet{
+            width: 420px;
+        }
     }
 
     &__card{
@@ -476,6 +497,10 @@ body{
     &__namedate{
         display:flex;
         justify-content: space-between;
+
+        @include tablet{
+            justify-content: flex-start;
+        }
     }
 
     &__outusername{
@@ -486,6 +511,10 @@ body{
         font-weight: lighter;
         color: #AFAFAF;
         margin: 0;
+
+        @include tablet{
+            margin-left: 5px;
+        }
     }
 
     &__outtext{
