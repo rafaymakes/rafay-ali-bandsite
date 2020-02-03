@@ -59,8 +59,4 @@ for (var i = 0; i <= 5; i++) {
     createCard(arrDate,arrVenue);
 }
 
-// for (var i=0,i<showsChunk.length;i++) {
-//     eventsContainer.appendChild(showsChunk[i]);
-//         console.log(showsChunk[i]);
-// }
 
