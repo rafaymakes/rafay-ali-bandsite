@@ -67,7 +67,10 @@ commentButton.onclick = function clickHandler () {
     for (var i = 0; i <= arrUserNames.length-1; i++) {
         createCard(arrUserNames[i],arrComments[i],arrDates[i],arrSrcs[i]);
     }
+
+    document.querySelector(".comments__form").reset()
 }
+
 
 
 
