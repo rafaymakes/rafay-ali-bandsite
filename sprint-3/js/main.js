@@ -71,6 +71,24 @@ commentButton.onclick = function clickHandler () {
     document.querySelector(".comments__form").reset()
 }
 
+//acquiring an api key
+const apiKeyRequest = axios.get ('https://project-1-api.herokuapp.com/register');
+api_key.then(result => {
+    console.log(result);
+});
+
+//storing the API key, that I grabbed from the browser, in a variable
+const apiKey = "234dfbdf-20c1-4168-b9b3-08ec038c0e1a";
+
+//retrieving comments
+const comments = axios.get (`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`);
+
+
+
+
+
+
+
 
 
 
