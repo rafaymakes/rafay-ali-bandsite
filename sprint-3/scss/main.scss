@@ -1,17 +1,6 @@
-@use 'fonts';
-@use 'mixins';
-
-@mixin tablet {
-    @media only screen and (min-width: 768px) {
-      @content;
-    }
-  }
-
-@mixin desktop {
-    @media only screen and (min-width: 1200px) {
-      @content;
-    }
-  }
+@import 'fonts';
+@import 'mixins';
+@import 'variables';
 
 *{
     font-family: Avenir-Regular, sans-serif;
@@ -21,11 +10,11 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
-    color: #323232;
+    color: $black;
 }
 
 .header{
-    background-color: #323232;
+    background-color: $black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -99,21 +88,21 @@ body{
             
             //deep-dive nav hover
             @keyframes flash {
-                0% {color: #FAFAFA;}
+                0% {color: $alabaster;}
                 20% {color: rgb(3, 178, 231);}
                 40% {color: rgba(181, 155, 192, 0.788);}
                 60% {color: rgb(242, 255, 67);}
                 80% {color: rgb(250, 128, 14);}
-                100%{color: #FAFAFA;}
+                100%{color:$alabaster;}
             }
 
             @keyframes flash_border {
-                0% {border-color: #FAFAFA;}
+                0% {border-color: $alabaster;}
                 20% {border-color: rgb(3, 178, 231);}
                 40% {border-color: rgba(181, 155, 192, 0.788);}
                 60% {border-color: rgb(242, 255, 67);}
                 80% {border-color: rgb(250, 128, 14);}
-                100%{border-color: #FAFAFA;}
+                100%{border-color:$alabaster;}
             }
 
             &:hover {
@@ -299,7 +288,7 @@ body{
 }
 
 .gallery{
-    background-color: #FAFAFA;
+    background-color: $alabaster;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -429,7 +418,7 @@ body{
         }
 
         &--title{
-            color: #AFAFAF;
+            color: $silver;
             font-weight: normal;
             font-size: 14px;
             text-transform: uppercase;
@@ -448,7 +437,7 @@ body{
         }
 
         &--title{
-            color: #AFAFAF;
+            color: $silver;
             font-weight: normal;
             font-size: 14px;
             text-transform: uppercase;
@@ -466,7 +455,7 @@ body{
         height: 50px;
         margin-top: 32px;
         margin-bottom: 32px;
-        border: 1px solid #323232  ;
+        border: 1px solid $black  ;
         border-radius: 6px;
 
         @include tablet{
@@ -491,7 +480,7 @@ body{
 
     &__card{
         width: 100%;
-        border-top: 1.5px solid #E1E1E1;
+        border-top: 1.5px solid $mercury;
         position: relative;
         padding: 25px 0 24px 63px;
         box-sizing: border-box;
@@ -522,7 +511,7 @@ body{
 
     &__outdate{
         font-weight: lighter;
-        color: #AFAFAF;
+        color: $silver;
         margin: 0;
 
         @include tablet{
@@ -539,7 +528,7 @@ body{
 }
 
 .footer{
-    background-color:#323232;
+    background-color:$black;
     display: flex;
     justify-content: center;
     color:white;
