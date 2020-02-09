@@ -1,5 +1,6 @@
 @import 'fonts';
 @import 'mixins';
+@import 'variables';
 
 *{
     font-family: Avenir-Regular, sans-serif;
@@ -374,7 +375,6 @@ body{
     justify-content: center;
     color:white;
     padding-left: 15px;
-    margin-top: 40px;
 
     @include tablet{
         padding-left: 24px;
@@ -395,97 +395,100 @@ body{
         @include desktop{
             width: 78.5%;
         }
-    
-        &--top {
+    }
 
-            @media screen and (max-width: 767px){
-                margin-bottom: 35px;
+    &__top {
+        @media screen and (max-width: 767px){
+            margin-bottom: 35px;
 
-            }
-
-            @include tablet{
-                display: flex;
-                justify-content: space-between;
-            }
-
-            &--logo{
-                display: none;
-
-                @include tablet{
-                    display: initial;
-                }
-
-                @include desktop{
-                    width: 120px;
-                }
-            }
-            
-            &--title{
-            font-size: 2.3rem;
-
-                @include desktop{
-                    font-size: 2rem;
-                }
-            }
-
-            &--iconcontainer{
-                width: 140px;
-                display: flex;
-                justify-content: space-between;
-                margin-left: 10px;
-
-                @include tablet{
-                    margin-left: 0;
-                    margin-right: 20%;
-                }
-
-                @include desktop{
-                    width: 110px;
-                    margin-right: 45%;
-                }
-            }
         }
 
-        &--contacts{ 
-            
-            @include tablet{
-                display:flex;
-                justify-content: space-between;
-            }
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 
-            @include desktop{
-                justify-content: space-between;
-                padding-right: 32%;
-            }
+    &__title{
+        font-size: 2.3rem;
+        font-family: "Avenir-Bold";
+
+        @include desktop{
+            font-size: 2rem;
+        }
+    }
+
+    &__iconcontainer{
+        width: 140px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+
+        @include tablet{
+            margin-left: 0;
+            margin-right: 20%;
+        }
+
+        @include desktop{
+            width: 110px;
+            margin-right: 45%;
+        }
+    }
+
+    &__logo{
+        display: none;
+
+        @include tablet{
+            display: initial;
+        }
+
+        @include desktop{
+            width: 120px;
+        }
+    }
+
+    &__contacts{ 
+            
+        @include tablet{
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+        @include desktop{
+            justify-content: space-between;
+            padding-right: 32%;
+        }
+    }
+
+    &__address, &__email {
+        font-size: .8rem;
+        font-weight: lighter;
+    }
+
+    &__name{
+        font-family: "Avenir-Bold";
         
-            &--card{
+        @include desktop{
+            font-size: .8rem;
+        }
+    }
 
-                &--name{
-                    font-weight: bold;
-                    
-                    @include desktop{
-                        font-size: .8rem;
-                    }
-                }
+    &__mailto{
+        color: white;
+        text-decoration: none;
+    }
 
-                &--address, &--email {
-                    font-size: .8rem;
-                    font-weight: lighter;
-                }
+    &__copyright{
+        width: 90%;
+        font-size: .8rem;
+        font-weight: lighter;
 
-            }
+        @include tablet{
+            margin-left: 2.5%;
         }
 
-        &--copyright{
-            width: 90%;
-            font-size: .8rem;
-            font-weight: lighter;
+        @include desktop{
             margin-left: 0;
         }
-    }  
-}
-
-.deepdive{
-    color: white;
-    text-decoration: none;
+    }
 }

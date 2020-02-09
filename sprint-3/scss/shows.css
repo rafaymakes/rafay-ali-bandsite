@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Avenir-Regular";
-  src: url("../assets/_globalfont/AvenirNextProLT/Regular.ttf");
+  src: url("../assets/_globalfont/Regular.ttf");
 }
 
 @font-face {
   font-family: "Avenir-Bold";
-  src: url("../assets/_globalfont/AvenirNextProLT/Bold.ttf");
+  src: url("../assets/_globalfont/Bold.ttf");
 }
 
 @font-face {
   font-family: "Avenir-Light";
-  src: url("../assets/_globalfont/AvenirNextProLT/Light.ttf");
+  src: url("../assets/_globalfont/Light.ttf");
 }
 
 @font-face {
   font-family: "Avenir-Heavy";
-  src: url("../assets/_globalfont/AvenirNextProLT/Heavy.ttf");
+  src: url("../assets/_globalfont/Heavy.ttf");
 }
 
 * {
@@ -573,7 +573,6 @@ body {
           justify-content: center;
   color: white;
   padding-left: 15px;
-  margin-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -604,13 +603,13 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .footer__square--top {
+  .footer__top {
     margin-bottom: 35px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .footer__square--top {
+  .footer__top {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -620,33 +619,18 @@ body {
   }
 }
 
-.footer__square--top--logo {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .footer__square--top--logo {
-    display: initial;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .footer__square--top--logo {
-    width: 120px;
-  }
-}
-
-.footer__square--top--title {
+.footer__title {
   font-size: 2.3rem;
+  font-family: "Avenir-Bold";
 }
 
 @media only screen and (min-width: 1200px) {
-  .footer__square--top--title {
+  .footer__title {
     font-size: 2rem;
   }
 }
 
-.footer__square--top--iconcontainer {
+.footer__iconcontainer {
   width: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -658,32 +642,48 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .footer__square--top--iconcontainer {
+  .footer__iconcontainer {
     margin-left: 0;
     margin-right: 20%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .footer__square--top--iconcontainer {
+  .footer__iconcontainer {
     width: 110px;
     margin-right: 45%;
   }
 }
 
+.footer__logo {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
-  .footer__square--contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .footer__logo {
+    display: initial;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .footer__square--contacts {
+  .footer__logo {
+    width: 120px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__contacts {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -691,30 +691,41 @@ body {
   }
 }
 
-.footer__square--contacts--card--name {
-  font-weight: bold;
+.footer__address, .footer__email {
+  font-size: .8rem;
+  font-weight: lighter;
+}
+
+.footer__name {
+  font-family: "Avenir-Bold";
 }
 
 @media only screen and (min-width: 1200px) {
-  .footer__square--contacts--card--name {
+  .footer__name {
     font-size: .8rem;
   }
 }
 
-.footer__square--contacts--card--address, .footer__square--contacts--card--email {
-  font-size: .8rem;
-  font-weight: lighter;
+.footer__mailto {
+  color: white;
+  text-decoration: none;
 }
 
-.footer__square--copyright {
+.footer__copyright {
   width: 90%;
   font-size: .8rem;
   font-weight: lighter;
-  margin-left: 0;
 }
 
-.deepdive {
-  color: white;
-  text-decoration: none;
+@media only screen and (min-width: 768px) {
+  .footer__copyright {
+    margin-left: 2.5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__copyright {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=shows.css.map */
