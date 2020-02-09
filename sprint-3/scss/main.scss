@@ -368,14 +368,15 @@ body{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 
     @include tablet{
         align-items: center;
     }
 
     &__inputs{
-        width: 224px;
+        width: 77.5%;
+        margin-left: 65px;
 
         @include tablet{
             width: 420px;

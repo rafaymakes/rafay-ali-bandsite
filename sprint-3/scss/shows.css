@@ -444,6 +444,7 @@ body {
 .shows__event--titles {
   border-bottom: none;
   height: 50px !important;
+  width: 93%;
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
       -ms-flex-direction: row !important;
@@ -506,14 +507,12 @@ body {
 }
 
 .shows__description--detail--date {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: normal;
 }
 
-@media only screen and (min-width: 768px) {
-  .shows__description--detail--date {
-    margin-right: 50px;
-  }
+.shows__hidden {
+  width: 170px;
 }
 
 .shows__button {

@@ -536,9 +536,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -550,7 +550,8 @@ body {
 }
 
 .comments__inputs {
-  width: 224px;
+  width: 77.5%;
+  margin-left: 65px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -699,6 +700,7 @@ body {
   position: absolute;
   top: 24px;
   left: -1px;
+  background-color: grey;
 }
 
 .comments__namedate {

@@ -292,6 +292,7 @@ body{
         &--titles{
             border-bottom: none;
             height: 50px !important;
+            width: 93%;
             flex-direction: row !important;
             justify-content: space-between;
             display: none;
@@ -299,6 +300,7 @@ body{
 
             @include tablet{
                 display: flex;
+                
             }
         }
     }
@@ -338,14 +340,14 @@ body{
             }
 
             &--date{
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: normal;
-
-                @include tablet{
-                    margin-right: 50px;
-                }
             }
         }
+    }
+
+    &__hidden{
+        width: 170px;
     }
 
     &__button{
