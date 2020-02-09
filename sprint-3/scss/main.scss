@@ -56,58 +56,58 @@ body{
         @include tablet{
             display:inline-block;
         }
+    }
 
-        &--link{
-            color: white;
-            width: 50%;
-            text-decoration: none;
-            text-align: center;
-            padding-bottom: .7rem;
-            margin: 0;
-            font-family: Avenir-Light;
+    &__link{
+        color: white;
+        width: 50%;
+        text-decoration: none;
+        text-align: center;
+        padding-bottom: .7rem;
+        margin: 0;
+        font-family: Avenir-Light;
 
-            @include tablet{
-                width: 85px;
-                height: 43px;
-                padding-bottom: 0;
-                display:inline-block;
-                margin-left: 45px;
-            }
+        @include tablet{
+            width: 85px;
+            height: 43px;
+            padding-bottom: 0;
+            display:inline-block;
+            margin-left: 45px
+        }
+
+        @include desktop{
+            margin-left: 56px;
+        }
+
+        &--active{
+            border-bottom: white solid 4px;
 
             @include desktop{
-                margin-left: 56px;
+                border-bottom: white solid 5px;
             }
-
-            &--active{
-                border-bottom: white solid 4px;
-
-                @include desktop{
-                    border-bottom: white solid 5px;
-                }
-            }
+        }
             
-            //deep-dive nav hover
-            @keyframes flash {
-                0% {color: $alabaster;}
-                20% {color: rgb(3, 178, 231);}
-                40% {color: rgba(181, 155, 192, 0.788);}
-                60% {color: rgb(242, 255, 67);}
-                80% {color: rgb(250, 128, 14);}
-                100%{color:$alabaster;}
-            }
+        //deep-dive nav hover
+        @keyframes flash {
+            0% {color: $alabaster;}
+            20% {color: rgb(3, 178, 231);}
+            40% {color: rgba(181, 155, 192, 0.788);}
+            60% {color: rgb(242, 255, 67);}
+            80% {color: rgb(250, 128, 14);}
+            100%{color:$alabaster;}
+        }
 
-            @keyframes flash_border {
-                0% {border-color: $alabaster;}
-                20% {border-color: rgb(3, 178, 231);}
-                40% {border-color: rgba(181, 155, 192, 0.788);}
-                60% {border-color: rgb(242, 255, 67);}
-                80% {border-color: rgb(250, 128, 14);}
-                100%{border-color:$alabaster;}
-            }
+        @keyframes flash_border {
+            0% {border-color: $alabaster;}
+            20% {border-color: rgb(3, 178, 231);}
+            40% {border-color: rgba(181, 155, 192, 0.788);}
+            60% {border-color: rgb(242, 255, 67);}
+            80% {border-color: rgb(250, 128, 14);}
+            100%{border-color:$alabaster;}
+        }
 
-            &:hover {
-                animation: flash 4s linear infinite, flash_border 4s linear infinite;
-            }
+        &:hover {
+            animation: flash 4s linear infinite, flash_border 4s linear infinite;
         }
     }
 }
@@ -181,107 +181,103 @@ body{
         @include desktop{
             width: 747px;
         }
+    }
 
-        &--title{
-            margin-top:1rem;
-            transform: scale(1,.95);
-            font-family: "Avenir-Heavy";
+    &__title{
+        margin-top:1rem;
+        transform: scale(1,.95);
+        font-family: "Avenir-Bold";
 
-            @include tablet{
-                font-size: 2rem;
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-
-            @include desktop{
-                margin-left: -76px;
-                margin-top: 35px;
-                margin-bottom: 35px;
-            }
+        @include tablet{
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        &--image{
-            width: 100%;
-            height: 10rem;
-            object-fit: cover;
+        @include desktop{
+            margin-left: -76px;
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+    }
 
-            @include tablet{
-                height: 362px;
-            }
+    &__image{
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
 
-            @include desktop{
-                height: 375px;
-            }
+        @include tablet{
+            height: 362px;
         }
 
-        &--quote{
+        @include desktop{
+            height: 375px;
+        }
+    }
+
+    &__quote{
+        font-size: .9rem;
+        width: 95%;
+        transform: scale(1,.95);
+    }
+
+    &__blurb{
+
+        @include tablet{
+            font-family: 'Avenir-Bold';
+            font-size: 1.3rem;
+        }
+
+        @include desktop{
+            margin-top: 40px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__names{
+        font-size: 1rem;
+        font-family: "Avenir-Bold";
+        transform: scale(1,.95);
+
+        @include tablet{
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        @include desktop{
+            font-size: 1.25rem;
+        }
+    }
+
+    &__textcontainer{
+    
+        @include tablet{
+            display: flex;
+        }
+
+        @include desktop{
+            justify-content: space-between;
+        }
+    }
+
+    &__text{
+        font-size: .8rem;
+        line-height: 1.5;
+        font-weight: lighter;
+
+        @include tablet{
+            width: 340px;
             font-size: .9rem;
-            width: 95%;
-            transform: scale(1,.95);
-            font-weight: bold;
-
-            &--blurb{
-                @include tablet{
-                    font-size: 1.3rem;
-                }
-
-                @include desktop{
-                    margin-top: 40px;
-                    margin-bottom: 32px;
-                }
-            }
-
         }
 
-        &--bio {
+        @include desktop{
+            width: 400px;
+            font-size: .8rem;
+        }
 
-            &--title{
-                font-size: 1rem;
-                transform: scale(1,.95);
-
-                @include tablet{
-                    font-size: 1.5rem;
-                    margin-bottom: 10px;
-                }
-
-                @include desktop{
-                    font-size: 1.25rem;
-                }
-
-            }
-
-            &--textcontainer{
-        
-                @include tablet{
-                    display: flex;
-                }
-
-                @include desktop{
-                    justify-content: space-between;
-                }
-            
-                &--text{
-                    font-size: .8rem;
-                    line-height: 1.5;
-                    font-weight: lighter;
-
-                    @include tablet{
-                        width: 340px;
-                        font-size: .9rem;
-                    }
-
-                    @include desktop{
-                        width: 400px;
-                        font-size: .8rem;
-                    }
-
-                    &--2{
-                        @include tablet{
-                            margin-left: 28px;
-                        }
-                        
-                    }
-                }
+        &--paragraph2{
+            @include tablet{
+                margin-left: 28px;
             }
         }
     }
@@ -298,7 +294,7 @@ body{
     &__title{
         align-self: flex-start;
         margin-left: 1rem;
-        font-weight: bold;
+        font-family: "Avenir-Bold";
         transform: scale(1,.95);
 
         @include tablet{
@@ -326,27 +322,26 @@ body{
             width: 75%;
             justify-content: space-between;
         }
+    }
 
-        &--image{
-            width:288px;
-            padding-bottom: 16px;
+    &__image{
+        width:288px;
+        padding-bottom: 16px;
 
-            &:hover{
-                filter: none;
-            }
+        &:hover{
+            filter: none;
+        }
 
-            @include tablet{
-                width: 224px;
-                padding-bottom: 24px;
-            }
+        @include tablet{
+            width: 224px;
+            padding-bottom: 24px;
+        }
 
-            @include desktop{
-                width: 286px;
-
-                //placed this in a media query since you can't really hover on touchscreen devices
-                //don't want the pictures to be stuck in B&W on those devices
-                filter: grayscale(100%);
-            }
+        @include desktop{
+            width: 286px;
+            //placed this in a media query since you can't really hover on touchscreen devices
+            //don't want the pictures to be stuck in B&W on those devices
+            filter: grayscale(100%);
         }
     }
 }
@@ -387,6 +382,7 @@ body{
 
     &__title{
         align-self: flex-start;
+        font-family: "Avenir-Bold";
 
         @include tablet{
             font-size: 2.2rem;
@@ -416,14 +412,6 @@ body{
         &:active, &:focus{
             border: 2px solid black;
         }
-
-        &--title{
-            color: $silver;
-            font-weight: normal;
-            font-size: 14px;
-            text-transform: uppercase;
-            margin-bottom: 7px;
-        }
     }
 
     &__text{
@@ -435,14 +423,14 @@ body{
         &:active, &:focus{
             border: 2px solid black;
         }
+    }
 
-        &--title{
-            color: $silver;
-            font-weight: normal;
-            font-size: 14px;
-            text-transform: uppercase;
-            margin-bottom: 7px;
-        }
+    &__label{
+        color: $silver;
+        font-weight: normal;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
     }
 
     &__button{
@@ -553,106 +541,104 @@ body{
         @include desktop{
             width: 78.5%;
         }
-    
-        &--top {
+    }
 
-            @media screen and (max-width: 767px){
-                margin-bottom: 35px;
+    &__top {
+        @media screen and (max-width: 767px){
+            margin-bottom: 35px;
 
-            }
-
-            @include tablet{
-                display: flex;
-                justify-content: space-between;
-            }
-
-            &--logo{
-                display: none;
-
-                @include tablet{
-                    display: initial;
-                }
-
-                @include desktop{
-                    width: 120px;
-                }
-            }
-            
-            &--title{
-            font-size: 2.3rem;
-
-                @include desktop{
-                    font-size: 2rem;
-                }
-            }
-
-            &--iconcontainer{
-                width: 140px;
-                display: flex;
-                justify-content: space-between;
-                margin-left: 10px;
-
-                @include tablet{
-                    margin-left: 0;
-                    margin-right: 20%;
-                }
-
-                @include desktop{
-                    width: 110px;
-                    margin-right: 45%;
-                }
-            }
         }
 
-        &--contacts{ 
-            
-            @include tablet{
-                display:flex;
-                justify-content: space-evenly;
-            }
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 
-            @include desktop{
-                justify-content: space-between;
-                padding-right: 32%;
-            }
+    &__title{
+        font-size: 2.3rem;
+        font-family: "Avenir-Bold";
+
+        @include desktop{
+            font-size: 2rem;
+        }
+    }
+
+    &__iconcontainer{
+        width: 140px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+
+        @include tablet{
+            margin-left: 0;
+            margin-right: 20%;
+        }
+
+        @include desktop{
+            width: 110px;
+            margin-right: 45%;
+        }
+    }
+
+    &__logo{
+        display: none;
+
+        @include tablet{
+            display: initial;
+        }
+
+        @include desktop{
+            width: 120px;
+        }
+    }
+
+    &__contacts{ 
+            
+        @include tablet{
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+        @include desktop{
+            justify-content: space-between;
+            padding-right: 32%;
+        }
+    }
+
+    &__address, &__email {
+        font-size: .8rem;
+        font-weight: lighter;
+    }
+
+    &__name{
+        font-family: "Avenir-Bold";
         
-            &--card{
-
-                &--name{
-                    font-weight: bold;
-                    
-                    @include desktop{
-                        font-size: .8rem;
-                    }
-                }
-
-                &--address, &--email {
-                    font-size: .8rem;
-                    font-weight: lighter;
-                }
-
-            }
-        }
-
-        &--copyright{
-            width: 90%;
+        @include desktop{
             font-size: .8rem;
-            font-weight: lighter;
-
-            @include tablet{
-                margin-left: 3%;
-
-            @include desktop{
-                margin-left: 0;
-            }
-            }
         }
-    }  
+    }
+
+    &__mailto{
+        color: white;
+        text-decoration: none;
+    }
+
+    &__copyright{
+        width: 90%;
+        font-size: .8rem;
+        font-weight: lighter;
+
+        @include tablet{
+            margin-left: 2.5%;
+        }
+
+        @include desktop{
+            margin-left: 0;
+        }
+    }
 }
 
-.deepdive{
-    color: white;
-    text-decoration: none;
-}
+
 
 
