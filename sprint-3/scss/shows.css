@@ -291,7 +291,7 @@ body {
 }
 
 .hero__title {
-  width: 300px;
+  width: 290px;
   margin: 0;
   position: absolute;
   top: 19%;
@@ -299,7 +299,7 @@ body {
   left: 16px;
   color: white;
   font-size: 2.22rem;
-  font-weight: bold;
+  font-family: 'Avenir-Bold';
   line-height: 3.2rem;
   -webkit-transform: scale(1, 0.95);
           transform: scale(1, 0.95);
@@ -372,6 +372,7 @@ body {
   margin-left: 16px;
   margin-bottom: 12px;
   font-size: 26px;
+  font-family: 'Avenir-Bold';
   -webkit-transform: scale(1, 0.95);
           transform: scale(1, 0.95);
 }
@@ -427,7 +428,7 @@ body {
 
 .shows__event {
   width: 90%;
-  height: 20rem;
+  height: 20.5rem;
   margin-left: 16px;
   margin-right: 16px;
   background-color: white;
@@ -541,7 +542,7 @@ body {
   font-weight: lighter;
   background-color: #323232;
   width: 100%;
-  height: 50px;
+  height: 60px;
   margin-top: 32px;
   margin-bottom: 16px;
   border: #323232 solid 1px;
