@@ -556,13 +556,14 @@ body {
 
 @media only screen and (min-width: 768px) {
   .comments__inputs {
-    width: 420px;
+    width: 360px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .comments__inputs {
-    margin-left: 90px;
+    width: 415px;
+    margin-left: 95px;
   }
 }
 

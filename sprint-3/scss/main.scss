@@ -379,11 +379,12 @@ body{
         margin-left: 65px;
 
         @include tablet{
-            width: 420px;
+            width: 360px;
         }
 
         @include desktop{
-            margin-left: 90px;
+            width: 415px;
+            margin-left: 95px;
         }
     }
 
