@@ -125,6 +125,9 @@ function displayComments() {
                     commentsOutputs.innerHTML = "";
                     displayComments();
                 })
+                deleting.catch(err =>{
+                    console.log(err);
+                })
             })
         })
 
@@ -139,8 +142,15 @@ function displayComments() {
                     commentsOutputs.innerHTML = "";
                     displayComments();
                 })
+                liking.catch(err =>{
+                    console.log(err);
+                })
             })  
         })
+    })
+
+    comments.catch(err =>{
+        console.log(err);
     })
 }
 
@@ -180,6 +190,10 @@ commentForm.addEventListener("submit", function(event){
     //calling the displayComments function in the promise will force it to wait until the posting has been completed before executing
     posting.then(result =>{
         displayComments();
+    })
+    
+    posting.catch(err =>{
+        console.log(err);
     })
 
     //clears the form fields
