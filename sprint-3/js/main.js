@@ -100,6 +100,20 @@ function displayComments() {
             deleteButton.innerHTML = "Delete";
             deleteButton.setAttribute("data-id",item.id);
             bottomButtons.appendChild(deleteButton);
+
+            const likeDisplay = document.createElement('div');
+            likeDisplay.classList.add('comments__display');
+            bottomButtons.appendChild(likeDisplay);
+
+            const likeIcon = document.createElement('img');
+            likeIcon.classList.add('comments__icon');
+            likeIcon.src= "./assets/images/likeicon.png";
+            likeDisplay.appendChild(likeIcon);
+
+            const likeCount = document.createElement('p');
+            likeCount.classList.add('comments__count');
+            likeCount.innerHTML = item.likes;
+            likeDisplay.appendChild(likeCount);
         })
 
         var deleteNodeList = document.querySelectorAll(".comments__delete");
@@ -122,6 +136,8 @@ function displayComments() {
                 liking.then(result =>{
                     button.style.color = '#0065AD';
                     button.style.fontFamily = "Avenir-Bold";
+                    commentsOutputs.innerHTML = "";
+                    displayComments();
                 })
             })  
         })
@@ -144,8 +160,12 @@ commentForm.addEventListener("submit", function(event){
     // console.log(username + comment);
 
     //aborts execution if the comment or username input is empty
-    if (username === "" || comment === "") {
+    if (username === "") {
         return alert('Please enter a username');
+    }
+
+    if (comment === "") {
+        return alert('Please enter a comment');
     }
 
     //posts the comment to the server
