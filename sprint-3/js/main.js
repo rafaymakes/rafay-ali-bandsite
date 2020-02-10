@@ -92,6 +92,7 @@ function displayComments() {
             const likeButton = document.createElement('button');
             likeButton.classList.add('comments__like');
             likeButton.innerHTML = "Like"
+            likeButton.setAttribute("data-id",item.id);
             bottomButtons.appendChild(likeButton);
 
             const deleteButton = document.createElement('button');
@@ -111,6 +112,18 @@ function displayComments() {
                     displayComments();
                 })
             })
+        })
+
+        var likeNodeList = document.querySelectorAll(".comments__like");
+        likeNodeList.forEach (button => {
+            button.addEventListener("click", function(event){
+                const id = button.getAttribute("data-id");
+                const liking = axios.put ("https://project-1-api.herokuapp.com/comments/"+id+"/like"+keyAffix);
+                liking.then(result =>{
+                    button.style.color = '#0065AD';
+                    button.style.fontFamily = "Avenir-Bold";
+                })
+            })  
         })
     })
 }

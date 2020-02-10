@@ -777,6 +777,15 @@ body {
   text-decoration: none;
 }
 
+.comments__delete:hover {
+  color: #c20000;
+  font-family: "Avenir-Regular";
+}
+
+.comments__like:hover {
+  color: #0065AD;
+}
+
 .footer {
   background-color: #323232;
   display: -webkit-box;

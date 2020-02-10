@@ -529,6 +529,15 @@ body{
         font-family: "Avenir-Light";
         text-decoration: none;
     }
+
+    &__delete:hover{
+        color: #c20000;
+        font-family: "Avenir-Regular";
+    }
+
+    &__like:hover{
+        color: #0065AD;
+    }
 }
 
 .footer{
