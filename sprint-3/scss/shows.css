@@ -487,6 +487,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .shows__event--titles {
+    margin-top: 10px;
+  }
+}
+
 .shows__description {
   color: #AFAFAF;
   font-weight: normal;
@@ -505,7 +511,7 @@ body {
   color: #AFAFAF;
   font-weight: normal;
   margin: 0 !important;
-  font-size: 14px;
+  font-size: 12px;
   width: 150px;
 }
 
@@ -516,7 +522,7 @@ body {
 }
 
 .shows__description--detail {
-  font-weight: lighter;
+  font-family: "Avenir-Light";
   font-size: 14px;
   margin: 0;
 }
@@ -529,7 +535,7 @@ body {
 
 .shows__description--detail--date {
   font-size: 15px;
-  font-weight: normal;
+  font-family: "Avenir-Regular";
 }
 
 .shows__hidden {
