@@ -470,7 +470,7 @@ body{
         width: 100%;
         border-top: 1.5px solid $mercury;
         position: relative;
-        padding: 25px 0 24px 63px;
+        padding: 25px 0 0 63px;
         box-sizing: border-box;
     }
 
@@ -512,7 +512,23 @@ body{
         margin-bottom: 0;
     }
 
+    &__bottom{
+        height: 30px;
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
 
+    &__like, &__delete{
+        height: 30px;
+        width: 50%;
+        color: $silver;
+        background-color: $alabaster;
+        border: 0;
+        font-family: "Avenir-Light";
+        text-decoration: none;
+    }
 }
 
 .footer{

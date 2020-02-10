@@ -36,7 +36,6 @@ function timeElapsed(postTime){
     if (secondsAgo > (60*60*24*365)) {
         return Math.round(secondsAgo/(60*60*24*365)) + ' years ago';
     }
-
 }
 
 //function for retrieving and displaying comments
@@ -50,6 +49,8 @@ function displayComments() {
 
     comments.then(result => {
         result.data.forEach (item => {
+
+            console.log(item);
 
             commentsSection.appendChild(commentsOutputs);
 
@@ -68,7 +69,6 @@ function displayComments() {
             nameDate.appendChild(userName);
 
             var displayTime = timeElapsed(item.timestamp);
-            // console.log(item.timestamp);
             
             const date = document.createElement('p');
             date.classList.add('comments__outdate');
@@ -84,6 +84,33 @@ function displayComments() {
             commentImg.classList.add('comments__outpicture');
             commentImg.src = "./assets/images/placeholderimage.jpg"
             commentsCard.appendChild(commentImg);
+
+            const bottomButtons = document.createElement('div');
+            bottomButtons.classList.add('comments__bottom');
+            commentsCard.appendChild(bottomButtons);
+
+            const likeButton = document.createElement('button');
+            likeButton.classList.add('comments__like');
+            likeButton.innerHTML = "Like"
+            bottomButtons.appendChild(likeButton);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('comments__delete');
+            deleteButton.innerHTML = "Delete";
+            deleteButton.setAttribute("data-id",item.id);
+            bottomButtons.appendChild(deleteButton);
+        })
+
+        var deleteNodeList = document.querySelectorAll(".comments__delete");
+        deleteNodeList.forEach (button => {
+            button.addEventListener("click", function(event){
+                const id = button.getAttribute("data-id");
+                const deleting = axios.delete ("https://project-1-api.herokuapp.com/comments/"+id+keyAffix);
+                deleting.then(result =>{
+                    commentsOutputs.innerHTML = "";
+                    displayComments();
+                })
+            })
         })
     })
 }
@@ -125,6 +152,8 @@ commentForm.addEventListener("submit", function(event){
     //clears the form fields
     document.querySelector(".comments__form").reset()
 });
+
+
 
 
 
