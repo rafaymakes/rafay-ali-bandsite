@@ -89,6 +89,7 @@ function displayComments() {
             bottomButtons.classList.add('comments__bottom');
             commentsCard.appendChild(bottomButtons);
 
+            //I saved the id in a custom attribute on both the like and delete buttons so it would be easier to use when making an axios request
             const likeButton = document.createElement('button');
             likeButton.classList.add('comments__like');
             likeButton.innerHTML = "Like"
@@ -116,11 +117,15 @@ function displayComments() {
             likeDisplay.appendChild(likeCount);
         })
 
+        //getting a nodelist of all of the delete buttons
         var deleteNodeList = document.querySelectorAll(".comments__delete");
+
+        //looping through each button and adding an event listener that will then grab the id and delete the comment from the api
         deleteNodeList.forEach (button => {
             button.addEventListener("click", function(event){
                 const id = button.getAttribute("data-id");
                 const deleting = axios.delete ("https://project-1-api.herokuapp.com/comments/"+id+keyAffix);
+                //once its deleted in the api, the comments all clear and reprint to remove the deleted comment from the DOM
                 deleting.then(result =>{
                     commentsOutputs.innerHTML = "";
                     displayComments();
@@ -131,6 +136,7 @@ function displayComments() {
             })
         })
 
+        //very similar to the delete button code except it adds a 'like' instead
         var likeNodeList = document.querySelectorAll(".comments__like");
         likeNodeList.forEach (button => {
             button.addEventListener("click", function(event){
@@ -191,7 +197,7 @@ commentForm.addEventListener("submit", function(event){
     posting.then(result =>{
         displayComments();
     })
-    
+
     posting.catch(err =>{
         console.log(err);
     })

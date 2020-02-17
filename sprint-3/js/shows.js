@@ -29,7 +29,7 @@ locationTitle.classList.add('shows__description--tablet')
 locationTitle.textContent = ('LOCATION');
 eventsTitles.appendChild(locationTitle);
 
-//this hidden button is used to keep the titles flexbox in line with the actual 
+//this hidden button is used to keep the titles in line with the actual shows event values with flexbox
 var hiddenDiv=document.createElement('div');
 hiddenDiv.classList.add('shows__hidden');
 eventsTitles.appendChild(hiddenDiv);
@@ -84,4 +84,8 @@ showDates.then(result => {
         ticketsButton.innerHTML = ('BUY TICKETS')
         showsEvent.appendChild(ticketsButton);
     })
+})
+
+showDates.catch (err =>{
+    console.log(err);
 })
